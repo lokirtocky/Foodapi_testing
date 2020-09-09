@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "a0f76daa-78cf-415d-8b5a-b1d36bc6e2a1",
+		"name": "food order apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customerCategoriesWithFood",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-language",
+						"name": "Content-Type",
+						"value": "en",
+						"type": "text"
+					},
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZhbjExQHlvcG1haWwuY29tIiwidXNlclR5cGUiOjIsImVudGVycHJpY2VSZWZlcmVuY2VJZCI6ImMwMzY3MDU2ZmM2NzlhMzcwYjViNDUzMTI4YzA5ZjIwIiwiaWF0IjoxNTk4ODU3MzYzLCJleHAiOjE1OTk0NjIxNjN9.oxvGSH5iNhlsD371FGHuGYUmTF8BTLZdt1Zxo-N1t2M",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/customer/getFoodItemsWithCategories?branchId=45&enterpriceReferenceId=c0367056fc679a370b5b453128c09f20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"customer",
+						"getFoodItemsWithCategories"
+					],
+					"query": [
+						{
+							"key": "branchId",
+							"value": "45"
+						},
+						{
+							"key": "enterpriceReferenceId",
+							"value": "c0367056fc679a370b5b453128c09f20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/customer/addFoodInCart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-language",
+						"value": "en",
+						"type": "text"
+					},
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZhbjExQHlvcG1haWwuY29tIiwidXNlclR5cGUiOjIsImVudGVycHJpY2VSZWZlcmVuY2VJZCI6ImMwMzY3MDU2ZmM2NzlhMzcwYjViNDUzMTI4YzA5ZjIwIiwiaWF0IjoxNTk5MjEwNTUzLCJleHAiOjE1OTk4MTUzNTN9.Ku1_fN9fdXI5m21s_yMngGOFqSOXr0-qOBhgmIE5wHE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"branchId\": 45,\n    \"products\": [{\n        \"productId\":4 ,\n        \"cartQuantity\": 2,\n        \"categoryId\":5\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.245.63.240:3333/api/customer/addFoodInCart",
+					"protocol": "http",
+					"host": [
+						"13",
+						"245",
+						"63",
+						"240"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"customer",
+						"addFoodInCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-language",
+						"name": "Content-Type",
+						"value": "en",
+						"type": "text"
+					},
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImVtYWlsIjoic2FudG9zaDExMUB5b3BtYWlsLmNvbSIsInVzZXJUeXBlIjoyLCJpYXQiOjE1OTE2MTkyMDMsImV4cCI6MTU5MjIyNDAwM30.pBsyHZJ8_hSX_Px_ucz9DEdT6Cdlry4x1D-qdC_ALz8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"email\": \"ravan11@yopmail.com\" , \n    \"password\" : \"123456\" ,\n    \"deviceType\":  \"ANDROID\" ,\n    \"deviceToken\":  \"kjdfkrn34j3k53j4fsfdf\" ,\n    \"appVersion\": \"123\" ,\n    \"latitude\": \"-89\" ,\n    \"longitude\": \"-179\" , \n    \"flushPreviousSessions\" : false ,\n    \"timezone\" : \"-330\" ,\n    \"enterpriceReferenceId\" : \"c0367056fc679a370b5b453128c09f20\"\n\t\n}\n\n"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/customer/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"customer",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/customer/getFoodCartItems",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZhbjExQHlvcG1haWwuY29tIiwidXNlclR5cGUiOjIsImVudGVycHJpY2VSZWZlcmVuY2VJZCI6ImMwMzY3MDU2ZmM2NzlhMzcwYjViNDUzMTI4YzA5ZjIwIiwiaWF0IjoxNTk4ODU3MzYzLCJleHAiOjE1OTk0NjIxNjN9.oxvGSH5iNhlsD371FGHuGYUmTF8BTLZdt1Zxo-N1t2M",
+						"type": "text"
+					},
+					{
+						"key": "content-language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://13.245.63.240/3333/api/customer/getFoodCartItems",
+					"protocol": "http",
+					"host": [
+						"13",
+						"245",
+						"63",
+						"240"
+					],
+					"path": [
+						"3333",
+						"api",
+						"customer",
+						"getFoodCartItems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/customer/createFoodOrder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZhbjExQHlvcG1haWwuY29tIiwidXNlclR5cGUiOjIsImVudGVycHJpY2VSZWZlcmVuY2VJZCI6ImMwMzY3MDU2ZmM2NzlhMzcwYjViNDUzMTI4YzA5ZjIwIiwiaWF0IjoxNTk4ODU3MzYzLCJleHAiOjE1OTk0NjIxNjN9.oxvGSH5iNhlsD371FGHuGYUmTF8BTLZdt1Zxo-N1t2M",
+						"type": "text"
+					},
+					{
+						"key": "content-language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderId\": \"2\",\n    \"paymentMethod\": 1,\n    \"address\": {\n      \"latitude\": 29.6857,\n      \"longitude\": 76.9905,\n      \"address\": \"994,sector 16 karnal\"\n      \n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.245.63.240/3333/api/customer/createFoodOrder",
+					"protocol": "http",
+					"host": [
+						"13",
+						"245",
+						"63",
+						"240"
+					],
+					"path": [
+						"3333",
+						"api",
+						"customer",
+						"createFoodOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/api/admin/getAllOrders?status=1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbklkIjoxLCJlbWFpbCI6ImZvb2RQcm9kdWN0QHlvcG1haWwuY29tIiwidXNlclR5cGUiOjAsImVudGVycHJpY2VSZWZlcmVuY2VJZCI6ImMwMzY3MDU2ZmM2NzlhMzcwYjViNDUzMTI4YzA5ZjIwIiwiaWF0IjoxNTk4ODU3ODI5LCJleHAiOjE1OTk0NjI2Mjl9.lnlP5QpbnyJhuZE158w7Ol0h5MkFRVNREsMagP6sWYE",
+						"type": "text"
+					},
+					{
+						"key": "content-language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/api/admin/getAllOrders?status=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"admin",
+						"getAllOrders"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
