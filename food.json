@@ -179,8 +179,8 @@
 						"63",
 						"240"
 					],
+					"port": "3333",
 					"path": [
-						"3333",
 						"api",
 						"customer",
 						"getFoodCartItems"
