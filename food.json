@@ -39,9 +39,12 @@
 					"raw": "http://13.245.63.240:3333/api/customer/getFoodItemsWithCategories?branchId=45&enterpriceReferenceId=c0367056fc679a370b5b453128c09f20",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"13",
+						"245",
+						"63",
+						"240"
 					],
-					"port": "3001",
+					"port": "3333",
 					"path": [
 						"api",
 						"customer",
@@ -136,9 +139,12 @@
 					"raw": "http://13.245.63.240:3333/api/customer/login",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"13",
+						"245",
+						"63",
+						"240"
 					],
-					"port": "3001",
+					"port": "3333",
 					"path": [
 						"api",
 						"customer",
@@ -247,9 +253,12 @@
 					"raw": "http://13.245.63.240:3333/api/admin/getAllOrders?status=1",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"13",
+						"245",
+						"63",
+						"240"
 					],
-					"port": "3001",
+					"port": "3333",
 					"path": [
 						"api",
 						"admin",
