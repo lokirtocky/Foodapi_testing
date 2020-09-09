@@ -36,7 +36,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:3001/api/customer/getFoodItemsWithCategories?branchId=45&enterpriceReferenceId=c0367056fc679a370b5b453128c09f20",
+					"raw": "http://13.245.63.240:3333/api/customer/getFoodItemsWithCategories?branchId=45&enterpriceReferenceId=c0367056fc679a370b5b453128c09f20",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -62,7 +62,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3001/api/customer/addFoodInCart",
+			"name": "http://13.245.63.240:3333/api/customer/addFoodInCart",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -133,7 +133,7 @@
 					"raw": "{\n\n    \"email\": \"ravan11@yopmail.com\" , \n    \"password\" : \"123456\" ,\n    \"deviceType\":  \"ANDROID\" ,\n    \"deviceToken\":  \"kjdfkrn34j3k53j4fsfdf\" ,\n    \"appVersion\": \"123\" ,\n    \"latitude\": \"-89\" ,\n    \"longitude\": \"-179\" , \n    \"flushPreviousSessions\" : false ,\n    \"timezone\" : \"-330\" ,\n    \"enterpriceReferenceId\" : \"c0367056fc679a370b5b453128c09f20\"\n\t\n}\n\n"
 				},
 				"url": {
-					"raw": "http://localhost:3001/api/customer/login",
+					"raw": "http://13.245.63.240:3333/api/customer/login",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -149,7 +149,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3001/api/customer/getFoodCartItems",
+			"name": "http://13.245.63.240:3333/api/customer/getFoodCartItems",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -165,7 +165,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://13.245.63.240/3333/api/customer/getFoodCartItems",
+					"raw": "http://13.245.63.240:3333/api/customer/getFoodCartItems",
 					"protocol": "http",
 					"host": [
 						"13",
@@ -184,7 +184,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3001/api/customer/createFoodOrder",
+			"name": "http://13.245.63.240:3333/api/customer/createFoodOrder",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -209,7 +209,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://13.245.63.240/3333/api/customer/createFoodOrder",
+					"raw": "http://13.245.63.240:3333/api/customer/createFoodOrder",
 					"protocol": "http",
 					"host": [
 						"13",
@@ -228,7 +228,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3001/api/admin/getAllOrders?status=1",
+			"name": "http://13.245.63.240:3333/api/admin/getAllOrders?status=1",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -244,7 +244,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:3001/api/admin/getAllOrders?status=1",
+					"raw": "http://13.245.63.240:3333/api/admin/getAllOrders?status=1",
 					"protocol": "http",
 					"host": [
 						"localhost"
