@@ -1,476 +1,168 @@
 {
 	"info": {
-		"_postman_id": "fc8502e1-7a42-4226-b78b-ea6b489c51a4",
-		"name": "food customer apis",
+		"_postman_id": "0a2d7620-2dfa-48a4-8949-7cc77da747ab",
+		"name": "HYLA-CEW API Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "customer categories with food",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://13.232.78.178:3334/api/customer/getFoodItemsWithCategories?branchId=45&enterpriceReferenceId=c0367056fc679a370b5b453128c09f20&isAddOn=0",
-					"protocol": "http",
-					"host": [
-						"13",
-						"232",
-						"78",
-						"178"
-					],
-					"port": "3334",
-					"path": [
-						"api",
-						"customer",
-						"getFoodItemsWithCategories"
-					],
-					"query": [
+			"name": "AT&T-QA",
+			"item": [
+				{
+					"name": "ATT_HYLA_MAX",
+					"item": [
 						{
-							"key": "branchId",
-							"value": "45"
+							"name": "NGR",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "hylapod_receipt",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "Password1",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"transaction\": {\r\n    \"date\": \"1406812828006\",\r\n    \"executionTime\": \"10\",\r\n    \"workstation\": \"works\",\r\n    \"deviceId\": \"713088841\",\r\n    \"trackingNumber\": \"1Z93563W0321394315\",\r\n    \"imei\": \"308153275564835\",\r\n    \"user\": \"att_whm_auto\"\r\n  },\r\n  \"deviceInformation\": {\r\n    \"Make\": \"Samsung\",\r\n    \"Model\": \"Galaxy S5\",\r\n    \"IMEI/MEID\": \"308153275564835\",\r\n    \"Model Number\": \"SM-G9009D\",\r\n    \"Memory Size\": \"16GB\",\r\n    \"RAW_CARRIER\": \"Other\"\r\n  }\r\n}\t"
+								},
+								"url": {
+									"raw": "https://qa-wh.att.hylatest.com/api/rest/v4/nextgen/deviceinformation/devices/attributes?operator=att_whm_auto",
+									"protocol": "https",
+									"host": [
+										"qa-wh",
+										"att",
+										"hylatest",
+										"com"
+									],
+									"path": [
+										"api",
+										"rest",
+										"v4",
+										"nextgen",
+										"deviceinformation",
+										"devices",
+										"attributes"
+									],
+									"query": [
+										{
+											"key": "operator",
+											"value": "att_whm_auto"
+										}
+									]
+								}
+							},
+							"response": []
 						},
 						{
-							"key": "enterpriceReferenceId",
-							"value": "c0367056fc679a370b5b453128c09f20"
+							"name": "NGT",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "hylapod_triage",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "Password1",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"deviceInformation\": {\r\n        \"POWER_ON\": \"YES\",\r\n        \"DEACTIVATED\": \"YES\",\r\n        \"SCREEN_ON\": \"YES\",\r\n        \"LCD_CRACKED\": \"YES\",\r\n        \"LCD_BRUISING\": \"YES\",\r\n        \"SURFACE_ALL\": \"YES\",\r\n        \"SURFACE_C\": \"YES\",\r\n        \"SURFACE_C_ADJUSTMENT\": \"\",\r\n        \"BATTERY_HEALTH\": \"GREATER_THAN_OR_EQUAL_70_PER\",\r\n        \"SPEAKER_MICROPHONE\": \"YES\",\r\n        \"TAKES_CHARGE\": \"NO\",\r\n        \"EXTERIOR_BUTTONS\": \"YES\",\r\n        \"MISSING_PIXELS\": \"YES\",\r\n        \"FRONT_CAMERA\": \"NO\",\r\n        \"REAR_CAMERA\": \"NO\",\r\n        \"BATTERY_PRESENT\":\"YES\",\r\n        \"DATAWIPE_STATUS\": \"DATA_CLEARED\",\r\n        \"CARRIER\": \"Other\",\r\n        \"IMEI\": \"308153275564835\",\r\n        \"CELL_PHONE_IMEI_ESN\": \"308153275564835\",\r\n        \"make\": \"Samsung\",\r\n        \"model\": \"Galaxy S5\",\r\n        \"model_number\": \"SM-G9009D\",\r\n        \"device_capacity\": \"16GB\",\r\n        \"COLOR\": \"GOLD\",\r\n        \"RAW_CARRIER\": \"Other\"\r\n    },\r\n    \"transaction\": {\r\n        \"date\": \"1558012200000\",\r\n        \"executionTime\": \"10\",\r\n        \"workstation\": \"work\",\r\n        \"deviceId\": \"713088841\",\r\n        \"trackingNumber\": \"\",\r\n        \"site\": \"Other\",\r\n        \"imei\": \"308153275564835\",\r\n        \"user\": \"att_whm_auto\"\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "https://qa-wh.att.hylatest.com/api/rest/v2/nextgen/deviceinformation/devices/attributes/inspection?operator=att_whm_auto",
+									"protocol": "https",
+									"host": [
+										"qa-wh",
+										"att",
+										"hylatest",
+										"com"
+									],
+									"path": [
+										"api",
+										"rest",
+										"v2",
+										"nextgen",
+										"deviceinformation",
+										"devices",
+										"attributes",
+										"inspection"
+									],
+									"query": [
+										{
+											"key": "operator",
+											"value": "att_whm_auto"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9e2bbdb5-27fc-4472-9281-317c042ef84c",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
 						},
 						{
-							"key": "isAddOn",
-							"value": "0"
+							"listen": "test",
+							"script": {
+								"id": "0c40eafb-d0ff-4768-a66d-428062471d32",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
 						}
-					]
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "add to cart",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "content-language",
-						"value": "en",
-						"type": "text"
-					},
-					{
-						"key": "access-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZhbjExQHlvcG1haWwuY29tIiwidXNlclR5cGUiOjIsImVudGVycHJpY2VSZWZlcmVuY2VJZCI6ImMwMzY3MDU2ZmM2NzlhMzcwYjViNDUzMTI4YzA5ZjIwIiwiaWF0IjoxNjAyMTU4MTQ4LCJleHAiOjE2MDI3NjI5NDh9.-xCuXQ9NpxZR91ksabFFrgwrHoVBGitXtk9ayDZmuaE",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"branchId\": 69,\n    \"products\": [{\n        \"productId\":39 ,\n        \"cartQuantity\": 5,\n        \"categoryId\":49,\n        \"addOns\" : [{\n     \t\t\"productId\" : 38 ,\n     \t\t\"cartQuantity\" : 1 ,\n     \t\t\"categoryId\" : 62\n     \t\t\n     \t}]\n    }]\n    \n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://13.232.78.178:3334/api/customer/addFoodInCart",
-					"protocol": "http",
-					"host": [
-						"13",
-						"232",
-						"78",
-						"178"
-					],
-					"port": "3334",
-					"path": [
-						"api",
-						"customer",
-						"addFoodInCart"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "customer login",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "content-language",
-						"name": "Content-Type",
-						"value": "en",
-						"type": "text"
-					},
-					{
-						"key": "access-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImVtYWlsIjoic2FudG9zaDExMUB5b3BtYWlsLmNvbSIsInVzZXJUeXBlIjoyLCJpYXQiOjE1OTE2MTkyMDMsImV4cCI6MTU5MjIyNDAwM30.pBsyHZJ8_hSX_Px_ucz9DEdT6Cdlry4x1D-qdC_ALz8",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\n    \"email\": \"ravan11@yopmail.com\" , \n    \"password\" : \"12345678\" ,\n    \"deviceType\":  \"ANDROID\" ,\n    \"deviceToken\":  \"kjdfkrn34j3k53j4fsfdf\" ,\n    \"appVersion\": \"123\" ,\n    \"latitude\": \"-89\" ,\n    \"longitude\": \"-179\" , \n    \"flushPreviousSessions\" : false ,\n    \"timezone\" : \"-330\" ,\n    \"enterpriceReferenceId\" : \"c0367056fc679a370b5b453128c09f20\"\n\t\n}\n\n"
-				},
-				"url": {
-					"raw": "http://13.232.78.178:3334/api/customer/login",
-					"protocol": "http",
-					"host": [
-						"13",
-						"232",
-						"78",
-						"178"
-					],
-					"port": "3334",
-					"path": [
-						"api",
-						"customer",
-						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get cart items",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "access-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZhbjExQHlvcG1haWwuY29tIiwidXNlclR5cGUiOjIsImVudGVycHJpY2VSZWZlcmVuY2VJZCI6ImMwMzY3MDU2ZmM2NzlhMzcwYjViNDUzMTI4YzA5ZjIwIiwiaWF0IjoxNjAyMTU4MTQ4LCJleHAiOjE2MDI3NjI5NDh9.-xCuXQ9NpxZR91ksabFFrgwrHoVBGitXtk9ayDZmuaE",
-						"type": "text"
-					},
-					{
-						"key": "content-language",
-						"value": "en",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://13.232.78.178:3334/api/customer/getFoodCartItems",
-					"protocol": "http",
-					"host": [
-						"13",
-						"232",
-						"78",
-						"178"
-					],
-					"port": "3334",
-					"path": [
-						"api",
-						"customer",
-						"getFoodCartItems"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create food order",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "access-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZhbjExQHlvcG1haWwuY29tIiwidXNlclR5cGUiOjIsImVudGVycHJpY2VSZWZlcmVuY2VJZCI6ImMwMzY3MDU2ZmM2NzlhMzcwYjViNDUzMTI4YzA5ZjIwIiwiaWF0IjoxNjAwMjM0MzgyLCJleHAiOjE2MDA4MzkxODJ9.q_bDU1darLjTCVgMHPjD1vhFzSqDI2IyOKVYaD1ay6c",
-						"type": "text"
-					},
-					{
-						"key": "content-language",
-						"value": "en",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"orderId\": \"1\",\n    \"paymentMethod\": 1,\n    \"address\": {\n      \"latitude\": 29.6857,\n      \"longitude\": 76.9905,\n      \"address\": \"994,sector 16 karnal\"\n      \n    }\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://13.232.78.178:3334/api/customer/createFoodOrder",
-					"protocol": "http",
-					"host": [
-						"13",
-						"232",
-						"78",
-						"178"
-					],
-					"port": "3334",
-					"path": [
-						"api",
-						"customer",
-						"createFoodOrder"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "getFoodList",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "content-language",
-						"name": "Content-Type",
-						"value": "en",
-						"type": "text"
-					},
-					{
-						"key": "access-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZhbjExQHlvcG1haWwuY29tIiwidXNlclR5cGUiOjIsImVudGVycHJpY2VSZWZlcmVuY2VJZCI6ImMwMzY3MDU2ZmM2NzlhMzcwYjViNDUzMTI4YzA5ZjIwIiwiaWF0IjoxNjAwMjM0MzgyLCJleHAiOjE2MDA4MzkxODJ9.q_bDU1darLjTCVgMHPjD1vhFzSqDI2IyOKVYaD1ay6c",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://13.232.78.178:3334/api/customer/getFoodOrderList",
-					"protocol": "http",
-					"host": [
-						"13",
-						"232",
-						"78",
-						"178"
-					],
-					"port": "3334",
-					"path": [
-						"api",
-						"customer",
-						"getFoodOrderList"
-					],
-					"query": [
-						{
-							"key": "branchId",
-							"value": "1",
-							"disabled": true
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "getAddOnOfFoodIncCustomer",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "content-language",
-						"name": "Content-Type",
-						"value": "en",
-						"type": "text"
-					},
-					{
-						"key": "access-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZhbjExQHlvcG1haWwuY29tIiwidXNlclR5cGUiOjIsImVudGVycHJpY2VSZWZlcmVuY2VJZCI6ImMwMzY3MDU2ZmM2NzlhMzcwYjViNDUzMTI4YzA5ZjIwIiwiaWF0IjoxNjAwMjM0MzgyLCJleHAiOjE2MDA4MzkxODJ9.q_bDU1darLjTCVgMHPjD1vhFzSqDI2IyOKVYaD1ay6c",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://13.232.78.178:3334/api/customer/getAddOnsOfProduct?enterpriceReferenceId=c0367056fc679a370b5b453128c09f20&productId=33",
-					"protocol": "http",
-					"host": [
-						"13",
-						"232",
-						"78",
-						"178"
-					],
-					"port": "3334",
-					"path": [
-						"api",
-						"customer",
-						"getAddOnsOfProduct"
-					],
-					"query": [
-						{
-							"key": "branchId",
-							"value": "1",
-							"disabled": true
-						},
-						{
-							"key": "enterpriceReferenceId",
-							"value": "c0367056fc679a370b5b453128c09f20"
-						},
-						{
-							"key": "productId",
-							"value": "33"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Food Order Details",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "access-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZhbjExQHlvcG1haWwuY29tIiwidXNlclR5cGUiOjIsImVudGVycHJpY2VSZWZlcmVuY2VJZCI6ImMwMzY3MDU2ZmM2NzlhMzcwYjViNDUzMTI4YzA5ZjIwIiwiaWF0IjoxNjAyMTU4MTQ4LCJleHAiOjE2MDI3NjI5NDh9.-xCuXQ9NpxZR91ksabFFrgwrHoVBGitXtk9ayDZmuaE",
-						"type": "text"
-					},
-					{
-						"key": "content-language",
-						"value": "en",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://13.232.78.178:3334/api/customer/getFoodOrderDetails?bookingId=12",
-					"protocol": "http",
-					"host": [
-						"13",
-						"232",
-						"78",
-						"178"
-					],
-					"port": "3334",
-					"path": [
-						"api",
-						"customer",
-						"getFoodOrderDetails"
-					],
-					"query": [
-						{
-							"key": "bookingId",
-							"value": "12"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get stores",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "access-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZhbjExQHlvcG1haWwuY29tIiwidXNlclR5cGUiOjIsImVudGVycHJpY2VSZWZlcmVuY2VJZCI6ImMwMzY3MDU2ZmM2NzlhMzcwYjViNDUzMTI4YzA5ZjIwIiwiaWF0IjoxNjAyMTU4MTQ4LCJleHAiOjE2MDI3NjI5NDh9.-xCuXQ9NpxZR91ksabFFrgwrHoVBGitXtk9ayDZmuaE",
-						"type": "text"
-					},
-					{
-						"key": "content-language",
-						"value": "en",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://13.232.78.178:3334/api/customer/getNearByStoresByRG?latitude=16.5062&longitude=80.6480&enterpriceReferenceId=c0367056fc679a370b5b453128c09f20 &availabilityType=delivery",
-					"protocol": "http",
-					"host": [
-						"13",
-						"232",
-						"78",
-						"178"
-					],
-					"port": "3334",
-					"path": [
-						"api",
-						"customer",
-						"getNearByStoresByRG"
-					],
-					"query": [
-						{
-							"key": "latitude",
-							"value": "16.5062"
-						},
-						{
-							"key": "longitude",
-							"value": "80.6480"
-						},
-						{
-							"key": "enterpriceReferenceId",
-							"value": "c0367056fc679a370b5b453128c09f20 "
-						},
-						{
-							"key": "availabilityType",
-							"value": "delivery"
-						},
-						{
-							"key": "cuisineId",
-							"value": "11",
-							"disabled": true
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get payment methods",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "access-token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZhbjExQHlvcG1haWwuY29tIiwidXNlclR5cGUiOjIsImVudGVycHJpY2VSZWZlcmVuY2VJZCI6ImMwMzY3MDU2ZmM2NzlhMzcwYjViNDUzMTI4YzA5ZjIwIiwiaWF0IjoxNjAyMTU4MTQ4LCJleHAiOjE2MDI3NjI5NDh9.-xCuXQ9NpxZR91ksabFFrgwrHoVBGitXtk9ayDZmuaE",
-						"type": "text"
-					},
-					{
-						"key": "content-language",
-						"value": "en",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://13.232.78.178:3334/api/customer/getFoodPaymentMethods?branchId=45",
-					"protocol": "http",
-					"host": [
-						"13",
-						"232",
-						"78",
-						"178"
-					],
-					"port": "3334",
-					"path": [
-						"api",
-						"customer",
-						"getFoodPaymentMethods"
-					],
-					"query": [
-						{
-							"key": "branchId",
-							"value": "45"
-						}
-					]
-				}
-			},
-			"response": []
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}
